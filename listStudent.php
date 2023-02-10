@@ -60,7 +60,7 @@ if (isset($_COOKIE["user"]) == "admin") {
                                     echo '<td>' . $value['birthday'] . '</td>';
                                     echo '<td>' . $value['address'] . '</td>';
                                     echo '<td>' . '<img class="image-student" src="' . $value['image'] . '" alt="none">' . '</td>';
-                                    echo '<td>' . '<a class="btn btn-warning function" href="http://localhost/LearnPHP/day3/editStudent.php?id=' . $key . '">Edit</a>' . '</td>';
+                                    echo '<td>' . '<a class="btn btn-warning function" href="./editStudent.php?id=' . $key . '">Edit</a>' . '</td>';
                                     echo '<td>' . '<a class="btn btn-danger function" data-bs-toggle="modal" data-bs-target="#exampleModal" >Delete</a>' . '</td>';
                                     echo '</tr> ';
                                 }
