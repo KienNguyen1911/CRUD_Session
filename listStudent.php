@@ -61,11 +61,29 @@ if (isset($_COOKIE["user"]) == "admin") {
                                     echo '<td>' . $value['address'] . '</td>';
                                     echo '<td>' . '<img class="image-student" src="' . $value['image'] . '" alt="none">' . '</td>';
                                     echo '<td>' . '<a class="btn btn-warning function" href="http://localhost/LearnPHP/day3/editStudent.php?id=' . $key . '">Edit</a>' . '</td>';
-                                    echo '<td>' . '<a class="btn btn-danger function" href="http://localhost/LearnPHP/day3/delete.php?id=' . $key . '">Delete</a>' . '</td>';
+                                    echo '<td>' . '<a class="btn btn-danger function" data-bs-toggle="modal" data-bs-target="#exampleModal" >Delete</a>' . '</td>';
                                     echo '</tr> ';
                                 }
                             }
                             ?>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h2>Do you want to delete this item?</h2>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <a type="button" href="<?php echo './delete.php?id=' . $key  ?>" class="btn btn-danger">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </tbody>
                     </table>
                 </div>
@@ -73,11 +91,10 @@ if (isset($_COOKIE["user"]) == "admin") {
             <div class="row">
                 <div class="col-md-12">
 
-                    <a class="btn btn-primary" href="http://localhost/LearnPHP/day3/addStudent.php">Form add student</a>
-                    <a class="btn btn-info" href="http://localhost/LearnPHP/day3/login.php">Log Out</a>
+                    <a class="btn btn-primary" href="./addStudent.php">Form add student</a>
+                    <a class="btn btn-info" href="./login.php">Log Out</a>
 
                 </div>
-
             </div>
         </div>
     <?php

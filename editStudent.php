@@ -106,7 +106,7 @@ function validate_input($data)
             </div>
             <div class="col-md-4">
 
-                <a href="http://localhost/LearnPHP/day3/listStudent.php" class="btn btn-primary">Students Table</a>
+                <a href="./listStudent.php" class="btn btn-primary">Students Table</a>
 
                 <div class="img">
                     <img id="output" src="<?php echo $value_image ?>" alt="" style="max-width: 400px; margin-top: 20px" />
